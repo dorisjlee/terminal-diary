@@ -1,0 +1,10 @@
+Research notes, observations, and future project ideas 
+....all scribbled down in this directory
+
+- enable spotlight search on this directory 
+- changed from well_being_score from the diary.py to tags
+- 'tags' are keywords for faciliating search
+        ex) hci,crowd,citisci
+        No spacing (one word) separated by commas
+
+
