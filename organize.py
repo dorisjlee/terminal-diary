@@ -61,8 +61,9 @@ for filename in glob.glob("{}_*.md".format(year)):
             content+=line
 #    print content 
 #    mega_content.append([date,time,tag1,tag2,content])
+mega_content.append([date,time,tag1,tag2,content])
 df = pd.DataFrame(mega_content, columns=['date', 'time', 'tag1','tag2','content'])
-#print df
+#print (df)
 
 f = open("{}.md".format(keyword),'w')
 for index, row in df.iterrows():
@@ -72,7 +73,7 @@ for index, row in df.iterrows():
 #            print row
             f.write(row['content'])
     elif flag == 'diary':
-#        print "Diary mode"
+        #print ("Diary mode")
         if row['tag1']==keyword or  row['tag2']==keyword:
 #            print row
             f.write('\n------------------------------------------\n')
@@ -85,4 +86,8 @@ if keyword == "word":
         f.write(i+"\n")
     f.close()
 if pdf=='pdf':
+    print ("Rending pdf with Pandoc")
     os.system("pandoc -o {0}.pdf {0}.md".format(keyword))
+    os.system("open . ") 
+else:
+    os.system("cat $research_notes_path/{0}.md".format(keyword))
