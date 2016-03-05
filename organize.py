@@ -1,23 +1,31 @@
 # This script helps you organize the diary files for easy viewing and reference
 #To use type in : 
-# >    organize        <tag keyword>   <format>
+# >    organize     <tag keyword>   <format>
 # For example if I want all my HCI notes in diary format (include time stamps) 
 # > organize hci diary
+# Alternatively this script can also help you compile a list of keywords that you have ever used 
+# The command is : 
+# > organize  word list
+
   
 import sys
 import pandas as pd
 import numpy as np
-keyword =  sys.argv[1]
-flag = sys.argv[2]
 import os
 import glob
+keyword =  sys.argv[1]
+flag = sys.argv[2]
+try:
+    pdf = sys.argv[3]
+except  (IndexError):
+    pass
 os.chdir("/Users/dorislee/Desktop/PersonalProj/research_diary/")
 year = '2016'
 mega_content  = []
 content = ""
 FIRST=True
-for filename in glob.glob("{}_*.txt".format(year)):
- #   print filename
+for filename in glob.glob("{}_*.md".format(year)):
+#    print filename
     f = open(filename)
 #    content=""
     for line in f.readlines():
@@ -56,7 +64,7 @@ for filename in glob.glob("{}_*.txt".format(year)):
 df = pd.DataFrame(mega_content, columns=['date', 'time', 'tag1','tag2','content'])
 #print df
 
-f = open("{}.txt".format(keyword),'w')
+f = open("{}.md".format(keyword),'w')
 for index, row in df.iterrows():
     if flag == 'notes':
 #        print "Notes mode" 
@@ -71,3 +79,10 @@ for index, row in df.iterrows():
             f.write(row['date'] +"    "+ row['time']+"\n")
             f.write(row['content'])
 f.close()
+if keyword == "word":
+    f = open("{}.md".format(keyword),'w')
+    for i in np.unique(df['tag1']):
+        f.write(i+"\n")
+    f.close()
+if pdf=='pdf':
+    os.system("pandoc -o {0}.pdf {0}.md".format(keyword))

@@ -14,9 +14,9 @@ except (IndexError):
     print ("Don't forget to tag 'em ")
 if option=="new":
     print ("Scribble 'em down before you forget!! " )
-    f = open('{}.txt'.format(today), 'a')
+    f = open('{}.md'.format(today), 'a')
 #    f.write(tag + "     "+ timestamp+"		")
     f.write(timestamp+ "     "+ tag+"        \n")
     f.close()
     # os.system("open .")
-    os.system("vim "+'{}.txt'.format(today))
+    os.system("vim "+'{}.md'.format(today))
