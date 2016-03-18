@@ -18,6 +18,7 @@ flag = sys.argv[2]
 try:
     pdf = sys.argv[3]
 except  (IndexError):
+    pdf =""
     pass
 os.chdir("/Users/dorislee/Desktop/PersonalProj/research_diary/")
 year = '2016'
@@ -76,18 +77,24 @@ for index, row in df.iterrows():
         #print ("Diary mode")
         if row['tag1']==keyword or  row['tag2']==keyword:
 #            print row
-            f.write('\n------------------------------------------\n')
-            f.write(row['date'] +"    "+ row['time']+"\n")
+#            f.write('\n------------------------------------------\n')
+            f.write("\n __"+row['date'] +"    "+ row['time']+"__ : \n ")
             f.write(row['content'])
 f.close()
 if keyword == "word":
+    #Organize a list of words that has be used as keywords and ignore certain keywords
+    exclude = open("exclude_keywords",'r').readlines()
+    #print exclude
     f = open("{}.md".format(keyword),'w')
     for i in np.unique(df['tag1']):
-        f.write(i+"\n")
+    #    print i 
+    #    print i+"\n" not in exclude
+        if (i+"\n" not in exclude):
+            f.write(i+"\n")
     f.close()
 if pdf=='pdf':
     print ("Rending pdf with Pandoc")
     os.system("pandoc -o {0}.pdf {0}.md".format(keyword))
     os.system("open . ") 
 else:
-    os.system("cat $research_notes_path/{0}.md".format(keyword))
+    os.system("cat {0}.md".format(keyword))

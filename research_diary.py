@@ -13,10 +13,10 @@ except (IndexError):
     score="-1" 
     print ("Don't forget to tag 'em ")
 if option=="new":
-    print ("Scribble 'em down before you forget!! " )
+#    print ("Scribble 'em down before you forget!! " )
     f = open('{}.md'.format(today), 'a')
 #    f.write(tag + "     "+ timestamp+"		")
-    f.write(timestamp+ "     "+ tag+"        \n")
+    f.write(timestamp+ "     "+ tag+"        \n \n")
     f.close()
     # os.system("open .")
     os.system("vim "+'{}.md'.format(today))
