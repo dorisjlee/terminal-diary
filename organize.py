@@ -20,12 +20,22 @@ try:
 except  (IndexError):
     pdf =""
     pass
+# print sys.argv
+# dopen = sys.argv[4]
+# try:
+# 	#don't open
+#     dopen = sys.argv[4]
+# except  (IndexError):
+# 	#open by default
+#     dopen = ""
+#     pass
+
 os.chdir("/Users/dorislee/Desktop/PersonalProj/research_diary/")
 year = '2016'
 mega_content  = []
 content = ""
 FIRST=True
-for filename in glob.glob("{}_*.md".format(year)):
+for filename in glob.glob("daily/{}_*.md".format(year)):
 #    print filename
     f = open(filename)
 #    content=""
@@ -66,7 +76,7 @@ mega_content.append([date,time,tag1,tag2,content])
 df = pd.DataFrame(mega_content, columns=['date', 'time', 'tag1','tag2','content'])
 #print (df)
 
-f = open("{}.md".format(keyword),'w')
+f = open("org_md/{}.md".format(keyword),'w')
 for index, row in df.iterrows():
     if flag == 'notes':
 #        print "Notes mode" 
@@ -94,7 +104,10 @@ if keyword == "word":
     f.close()
 if pdf=='pdf':
     print ("Rending pdf with Pandoc")
-    os.system("pandoc -o {0}.pdf {0}.md".format(keyword))
-    os.system("open . ") 
+    os.system("pandoc -o {0}/{1}.pdf org_md/{1}.md".format(flag,keyword))
+    # print dopen
+    # print dopen!="dopen"
+    # if dopen!="dopen":
+    os.system("open {0}/{1}.pdf".format(flag,keyword)) 
 else:
     os.system("cat {0}.md".format(keyword))
