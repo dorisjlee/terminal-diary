@@ -33,11 +33,16 @@ def main(args=None):
         pdf =""
         pass
 
-
+    date = ""
+    time=""
+    tag1=""
+    tag2=""
+    content=""
     year = '2016'
     mega_content  = []
     content = ""
     FIRST=True
+
     for filename in glob.glob("daily/{}_*.md".format(year)):
         f = open(filename)
         for line in f.readlines():
@@ -70,7 +75,8 @@ def main(args=None):
                 content+=line
     mega_content.append([date,time,tag1,tag2,content])
     df = pd.DataFrame(mega_content, columns=['date', 'time', 'tag1','tag2','content'])
-
+    if not os.path.exists("org_md"):
+        os.makedirs("org_md")
     f = open("org_md/{}.md".format(keyword),'w')
     for index, row in df.iterrows():
         if flag == 'notes':
@@ -91,7 +97,9 @@ def main(args=None):
         f.close()
     if pdf=='pdf':
         print ("Rending pdf with Pandoc")
+        if not os.path.exists(flag):
+            os.makedirs(flag)
         os.system("pandoc -o {0}/{1}.pdf org_md/{1}.md".format(flag,keyword))
         os.system("open {0}/{1}.pdf".format(flag,keyword)) 
     else:
-        os.system("cat {0}.md".format(keyword))
+        os.system("cat org_md/{}.md".format(keyword))
