@@ -29,7 +29,19 @@ setup(
         "License :: OSI Approved :: BSD License",
     ],
     install_requires=[
-        'numpy>=1.10.1',
-        'pandas>=0.17.1'
+        'numpy>=1.9.0',
+        'pandas>=0.16.0'
     ]
 )
+
+
+def user_prompt():
+    f = raw_input("\n Please type in the path to the directory where you want to store your notes and press 'Enter': \n (Default: Desktop/terminal-notes) ")
+    print f
+    if f=="":
+        f = "$HOME/Desktop/terminal-notes/"
+    if not os.path.exists(f):
+        os.system("mkdir {}".format(f))
+    file = open('FILE_LOC', 'w')
+    file.write(f)
+    file.close()
