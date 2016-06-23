@@ -18,7 +18,7 @@ def main():
 
 	exclude  = open("exclude_keywords").readlines()
 	print "Here are all the notes that I will organize:"
-	os.system("iforgot ")
+	os.system("iforgot")
 	tags  = open("org_md/word.md").readlines()
 	for t in tags:
 		print "Organizing "+t[:-1]
