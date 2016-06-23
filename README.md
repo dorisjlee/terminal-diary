@@ -16,3 +16,17 @@ git clone git@github.com:dorisjlee/terminal-diary.git
 cd terminal-diary
 python setup.py install
 ```
+
+# Tutorial
+
+ note
+
+
+ organize 
+
+
+ iforgot
+
+
+ syncup
+
