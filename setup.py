@@ -33,7 +33,8 @@ setup(
         'console_scripts': [
             'terminal-diary=terminal_diary.terminal_diary:main',
             'organize = terminal_diary.organize:main',
-            'note = terminal_diary.note:main'
+            'note = terminal_diary.note:main',
+            'iforgot=terminal_diary.iforgot:main'
         ],
     },
     classifiers=[

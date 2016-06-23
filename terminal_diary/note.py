@@ -32,16 +32,11 @@ def main(args=None):
 			----------------------------------------------
 			''')
 		print ('''
-			``organize`` compiles the diary files by their tags for easy viewing and reference
+		 	``note`` : lets you jot down Markdown notes with tags by opening up your diary file today in a text editor (Vim by default).
 
-		    >    organize     <tag keyword>   <format>  <pdf>
-		    Ex) If I want all my physics notes in diary format (include time stamps)
-		    > organize physics diary
-
-		    Without Timestamps:
-		    > organize physics notes
-
-		    Compile a list of all keywords that you have ever used:
-		    > organize word list
+		    >    note     <tag keyword>   
+		    
+		    Ex) note physics
+		    >
 
 			''')
