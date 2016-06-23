@@ -1,8 +1,23 @@
 import os
 from setuptools import setup
 
+try: 
+    os.system("rm terminal_diary/FILE_LOC")
+except:
+    pass
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
+def user_prompt():
+    f = raw_input("\n Please type in the path to the directory where you want to store your notes and press 'Enter': \n (Default: Desktop/terminal-notes) ")
+
+    if f=="":
+        f = "Desktop"
+    file = open('terminal_diary/FILE_LOC', 'a')
+    file.write(f)
+    file.close()
+
+
+user_prompt()
 setup(
     name = "terminal-diary",
     version = "0.9.0",
@@ -14,8 +29,6 @@ setup(
     url = "https://github.com/dorisjlee/terminal-diary",
     packages=['terminal_diary'],
     long_description=read('README.md'),
-    # scripts=['bin/organize','bin/note'],
-
     entry_points = {
         'console_scripts': [
             'terminal-diary=terminal_diary.terminal_diary:main',
@@ -31,17 +44,7 @@ setup(
     install_requires=[
         'numpy>=1.9.0',
         'pandas>=0.16.0'
-    ]
+    ],
+    data_files = [('', ['terminal_diary/FILE_LOC',]),]
 )
 
-
-def user_prompt():
-    f = raw_input("\n Please type in the path to the directory where you want to store your notes and press 'Enter': \n (Default: Desktop/terminal-notes) ")
-    print f
-    if f=="":
-        f = "$HOME/Desktop/terminal-notes/"
-    if not os.path.exists(f):
-        os.system("mkdir {}".format(f))
-    file = open('FILE_LOC', 'w')
-    file.write(f)
-    file.close()

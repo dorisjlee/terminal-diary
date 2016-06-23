@@ -3,9 +3,16 @@ import sys
 import os
 import time
 import datetime
+
 here = os.path.abspath(os.path.dirname(__file__))
-print here
 os.chdir(here)
+data_path = open(here+"/../FILE_LOC").read()
+os.chdir("../../../../../../../")
+os.chdir(data_path)
+if not os.path.exists("terminal-notes"):
+    os.system("mkdir {}".format("terminal-notes"))
+os.chdir("terminal-notes")
+
 def main(args=None):
 	today = str(datetime.date.today()).replace("-",'_')
 	timestamp =  str(datetime.datetime.now()).split(".")[0]

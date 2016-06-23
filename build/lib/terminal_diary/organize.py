@@ -1,5 +1,4 @@
 #!/usr/bin/env python2.7
-
 import sys
 import pandas as pd
 import numpy as np
@@ -7,6 +6,14 @@ import os
 import glob
 here = os.path.abspath(os.path.dirname(__file__))
 os.chdir(here)
+data_path = open(here+"/../FILE_LOC").read()
+os.chdir("../../../../../../../")
+os.chdir(data_path)
+
+if not os.path.exists("terminal-notes"):
+    os.system("mkdir {}".format("terminal-notes"))
+os.chdir("terminal-notes")
+
 def main(args=None):
     try: 
         keyword =  sys.argv[1]
