@@ -34,7 +34,8 @@ setup(
             'terminal-diary=terminal_diary.terminal_diary:main',
             'organize = terminal_diary.organize:main',
             'note = terminal_diary.note:main',
-            'iforgot=terminal_diary.iforgot:main'
+            'iforgot=terminal_diary.iforgot:main',
+            'syncup=terminal_diary.syncup:main'
         ],
     },
     classifiers=[

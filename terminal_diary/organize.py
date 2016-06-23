@@ -106,11 +106,12 @@ def main(args=None):
             if (i+"\n" not in exclude):
                 f.write(i+"\n")
         f.close()
-    if pdf=='pdf':
+    if pdf=='pdf' or pdf=='pdf!':
         print ("Rending pdf with Pandoc")
         if not os.path.exists(flag):
             os.makedirs(flag)
         os.system("pandoc -o {0}/{1}.pdf org_md/{1}.md".format(flag,keyword))
-        os.system("open {0}/{1}.pdf".format(flag,keyword)) 
+        if pdf=="pdf":
+            os.system("open {0}/{1}.pdf".format(flag,keyword)) 
     else:
         os.system("cat org_md/{}.md".format(keyword))

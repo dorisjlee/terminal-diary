@@ -1,5 +1,5 @@
 #!/usr/bin/env python2.7
-#Organize a list of words that has be used as keywords and ignore certain keywords
+#Organize a list of words that has be used as keywords and ignore certain keywords in exclude_keywords
 import sys
 import pandas as pd
 import numpy as np
