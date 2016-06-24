@@ -33,13 +33,15 @@ Taking some notes about machine learning (ML):
 
 For quick reference of recent notes on terminal (No Pdf):
 ``organize ML notes``
-![](https://i.imgsafe.org/c7fcc24da5.gif  =200x100)
+![](https://i.imgsafe.org/c7fcc24da5.gif)
 
 ``organize ML notes pdf``
 ![](https://i.imgsafe.org/c7fcb6a0e0.gif)
 
 If I want all my machine learning notes in diary format (include time stamps) as a pdf
 ``organize ML diary pdf``
+
+![](https://goo.gl/BEnsaK)
 
  - Sometimes I forget which keyword tags I've used for a subject keyword (Was it ML or machine_learning or machine-learning?). You can use the ``iforgot`` command to print a list of all the keywords that you've ever used, so that they'll all get sorted together.
  	![iforgot](https://i.imgsafe.org/c83374c77d.gif)
@@ -49,7 +51,7 @@ If I want all my machine learning notes in diary format (include time stamps) as
 
 # Demo
 
-[![Demo](https://www.youtube.com/watch?v=25FKbVKnii0)](https://www.youtube.com/watch?v=25FKbVKnii0)
+[![Demo](https://raw.githubusercontent.com/dorisjlee/remote/master/video_pic.png)](https://www.youtube.com/watch?v=25FKbVKnii0)
 
 
 # Misc. 
