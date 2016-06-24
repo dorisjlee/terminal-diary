@@ -7,43 +7,39 @@ terminal-diary is an easy-to-use, note-taking and diary app that lets you take n
 
 - Easiest way to install terminal-diary is through ``pip``: 
 
-		``pip install terminal-diary``
+	``pip install terminal-diary``
 
-You can also build from source: 
-
-	```
-	git clone git@github.com:dorisjlee/terminal-diary.git
-	cd terminal-diary
-	python setup.py install
-	```
+- You can also build from source: 
+```
+git clone git@github.com:dorisjlee/terminal-diary.git
+cd terminal-diary
+python setup.py install
+```
 
 # Tutorial
 
-``note`` 
+``note     <tag keyword>  ``
 - The ``note`` command lets you jot down notes. All the notes written on the same day gets stored in the same text file, but you specify keyword tags so that it is easier to organize them later.
 
-	note     <tag keyword>  
+Taking some notes about machine learning (ML):
 
-	Taking some notes about machine learning (ML):
+``note ML``
+![](https://i.imgsafe.org/c7fcc4e40b.gif)
 
-	> note ML
-	![](https://i.imgsafe.org/c7fcc4e40b.gif)
 
-``organize``
+``organize     <tag keyword>   <format>  <pdf>``
+
 - The ``organize`` command compiles all your note files from multiple days into relevant categories based on your keyword tag. There's two formatting modes:``diary`` (which contains timestamps of each record) and ``notes`` (no timestamps). While a markdown file of the notes is always generated with ``organize``, you can also optionally generate the pdf.
 
-	organize     <tag keyword>   <format>  <pdf>
+For quick reference of recent notes on terminal (No Pdf):
+``organize ML notes``
+![](https://i.imgsafe.org/c7fcc24da5.gif  =200x100)
 
-	For quick reference of recent notes on terminal (No Pdf):
-	> organize ML notes 
-	![](https://i.imgsafe.org/c7fcc24da5.gif)
+``organize ML notes pdf``
+![](https://i.imgsafe.org/c7fcb6a0e0.gif)
 
-	
-	> organize ML notes pdf
-    ![](https://i.imgsafe.org/c7fcb6a0e0.gif)
-
-    If I want all my machine learning notes in diary format (include time stamps) as a pdf
-    >  	organize ML diary pdf
+If I want all my machine learning notes in diary format (include time stamps) as a pdf
+``organize ML diary pdf``
 
  - Sometimes I forget which keyword tags I've used for a subject keyword (Was it ML or machine_learning or machine-learning?). You can use the ``iforgot`` command to print a list of all the keywords that you've ever used, so that they'll all get sorted together.
  	![iforgot](https://i.imgsafe.org/c83374c77d.gif)
