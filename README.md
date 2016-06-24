@@ -18,8 +18,10 @@ python setup.py install
 
 # Tutorial
 
+
 ``note     <tag keyword>  ``
-- The ``note`` command lets you jot down notes. All the notes written on the same day gets stored in the same text file, but you specify keyword tags so that it is easier to organize them later.
+
+The ``note`` command lets you jot down notes. All the notes written on the same day gets stored in the same text file, but you specify keyword tags so that it is easier to organize them later.
 
 Taking some notes about machine learning (ML):
 
@@ -27,9 +29,11 @@ Taking some notes about machine learning (ML):
 ![](https://i.imgsafe.org/c7fcc4e40b.gif)
 
 
+
 ``organize     <tag keyword>   <format>  <pdf>``
 
-- The ``organize`` command compiles all your note files from multiple days into relevant categories based on your keyword tag. There's two formatting modes:``diary`` (which contains timestamps of each record) and ``notes`` (no timestamps). While a markdown file of the notes is always generated with ``organize``, you can also optionally generate the pdf.
+
+The ``organize`` command compiles all your note files from multiple days into relevant categories based on your keyword tag. There's two formatting modes:``diary`` (which contains timestamps of each record) and ``notes`` (no timestamps). While a markdown file of the notes is always generated with ``organize``, you can also optionally generate the pdf.
 
 For quick reference of recent notes on terminal (No Pdf):
 ``organize ML notes``
@@ -40,14 +44,18 @@ For quick reference of recent notes on terminal (No Pdf):
 
 If I want all my machine learning notes in diary format (include time stamps) as a pdf
 ``organize ML diary pdf``
-
 ![](https://goo.gl/BEnsaK)
 
- - Sometimes I forget which keyword tags I've used for a subject keyword (Was it ML or machine_learning or machine-learning?). You can use the ``iforgot`` command to print a list of all the keywords that you've ever used, so that they'll all get sorted together.
- 	![iforgot](https://i.imgsafe.org/c83374c77d.gif)
 
- - The ``syncup`` command allows you to generate the most up to date notes based on your diary files. This might take a while to run, but you get nice pretty pdf notes of everything afterwards.
- 	![syncup](https://i.imgsafe.org/c8338d543b.gif)
+Sometimes I forget which keyword tags I've used for a subject keyword (Was it ML or machine_learning or machine-learning?). You can use the ``iforgot`` command to print a list of all the keywords that you've ever used, so that they'll all get sorted together.
+
+![iforgot](https://i.imgsafe.org/c83374c77d.gif)
+
+
+
+The ``syncup`` command allows you to generate the most up to date notes based on your diary files. This might take a while to run, but you get nice pretty pdf notes of everything afterwards.
+
+![syncup](https://i.imgsafe.org/c8338d543b.gif)
 
 # Demo
 
