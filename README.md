@@ -57,10 +57,9 @@ The ``syncup`` command allows you to generate the most up to date notes based on
 
 ![syncup](https://i.imgsafe.org/c8338d543b.gif)
 
-# Demo
+# Demo video
 
 [![Demo](https://raw.githubusercontent.com/dorisjlee/remote/master/video_pic.png)](https://www.youtube.com/watch?v=25FKbVKnii0)
-
 
 # Misc. 
 

@@ -5,8 +5,6 @@ try:
     os.system("rm terminal_diary/FILE_LOC")
 except:
     pass
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 def user_prompt():
     f = raw_input("\n Please type in the path to the directory where you want to store your notes and press 'Enter': \n (Default: Desktop/terminal-notes) ")
 
@@ -28,7 +26,6 @@ setup(
     keywords = "note, diary, text-edit",
     url = "https://github.com/dorisjlee/terminal-diary",
     packages=['terminal_diary'],
-    long_description=read('README.md'),
     entry_points = {
         'console_scripts': [
             'terminal-diary=terminal_diary.terminal_diary:main',
