@@ -16,6 +16,8 @@ cd terminal-diary
 python setup.py install
 ```
 
+- The installation will ask you the path that you want to store your notes file in. This will automatically create a folder called terminal-notes in that directory. If you want your notes to sync with Dropbox, then type ``Dropbox". If you want to reset the installation path, you can simply rerun the install script or edit ``FILE_LOC``.
+
 # Tutorial
 
 
