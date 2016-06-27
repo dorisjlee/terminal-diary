@@ -8,7 +8,10 @@ def main():
 	data_path = open(here+"/../FILE_LOC").read()
 	os.chdir("../../../../../../../")
 	os.chdir(data_path)
-	pdf = sys.argv[1]
+	try:
+		pdf = sys.argv[1]
+	except(IndexError):
+		pdf = ""
 	if pdf =="pdf":
 		pdf=pdf+"!" #signify to organize.py to supress opening of pdf files
 	if not os.path.exists("terminal-notes"):
