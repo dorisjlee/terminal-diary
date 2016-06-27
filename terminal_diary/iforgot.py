@@ -68,6 +68,7 @@ def main(args=None):
     if not os.path.exists("exclude_keywords"):
         f= open("exclude_keywords",'w') 
         f.close()
+        exclude=[]
     else:
         exclude = open("exclude_keywords",'r').readlines()
     f = open("org_md/word.md",'w')
