@@ -1,3 +1,5 @@
+[![PyPI version](https://badge.fury.io/py/terminal-diary.svg)](https://badge.fury.io/py/terminal-diary)
+
 # terminal-diary
 terminal-diary is an easy-to-use, note-taking and diary app that lets you take notes in the terminal with your favorite text editor. It can render pdfs of your notes scattered across multiple days using [pandoc](http://pandoc.org/) (supports Markdown, LaTeX, HTML ..etc). It is written completely in Python, so that it is highly-customizable. Feel free to fork and customize your own settings. 
  
