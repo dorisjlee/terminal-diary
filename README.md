@@ -62,6 +62,9 @@ The ``syncup`` command allows you to generate the most up to date notes based on
 
 ![syncup](https://i.imgsafe.org/c8338d543b.gif)
 
+The ``diary`` command is used for writing diaries that are stored separately from  your research diaries. By default, it saves it into a folder called ``diary.noindex``, the .noindex prevents Mac from indexing it in the Spotlight search.
+
+
 # Demo video
 
 [![Demo](https://raw.githubusercontent.com/dorisjlee/remote/master/video_pic.png)](https://www.youtube.com/watch?v=25FKbVKnii0)

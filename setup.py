@@ -5,6 +5,10 @@ try:
     os.system("rm terminal_diary/FILE_LOC")
 except:
     pass
+try:
+    os.system("rm terminal_diary/DIARY_LOC")
+except:
+    pass
 def user_prompt():
     f = raw_input("\n Please type in the path to the directory where you want to store your notes and press 'Enter': \n (Default: Desktop/terminal-notes) ")
 
@@ -13,6 +17,13 @@ def user_prompt():
     file = open('terminal_diary/FILE_LOC', 'a')
     file.write(f)
     file.close()
+
+    f2 = raw_input("\n Please type in the path to the directory where you want to store your diaries and press 'Enter': \n (Default: Desktop/diary.noindex) ")
+    if f2=="":
+        f2 = "Desktop"
+    file2 = open('terminal_diary/DIARY_LOC', 'a')
+    file2.write(f2)
+    file2.close()
 
 
 user_prompt()
@@ -31,6 +42,7 @@ setup(
             'terminal-diary=terminal_diary.terminal_diary:main',
             'organize = terminal_diary.organize:main',
             'note = terminal_diary.note:main',
+            'diary = terminal_diary.diary:main',
             'iforgot=terminal_diary.iforgot:main',
             'syncup=terminal_diary.syncup:main'
         ],
@@ -44,6 +56,7 @@ setup(
         'numpy>=1.9.0',
         'pandas>=0.16.0'
     ],
-    data_files = [('', ['terminal_diary/FILE_LOC',]),]
+    data_files = [('', ['terminal_diary/FILE_LOC',]),
+                  ('', ['terminal_diary/DIARY_LOC',])]
 )
 
