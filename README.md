@@ -54,13 +54,13 @@ If I want all my machine learning notes in diary format (include time stamps) as
 
 Sometimes I forget which keyword tags I've used for a subject keyword (Was it ML or machine_learning or machine-learning?). You can use the ``iforgot`` command to print a list of all the keywords that you've ever used, so that they'll all get sorted together.
 
-![iforgot](https://i.imgsafe.org/c83374c77d.gif)
+![iforgot](https://raw.githubusercontent.com/dorisjlee/remote/master/terminal-notes-gif/iforgot.gif)
 
 
 
 The ``syncup`` command allows you to generate the most up to date notes based on your diary files. This might take a while to run, but you get nice pretty pdf notes of everything afterwards.
 
-![syncup](https://i.imgsafe.org/c8338d543b.gif)
+![syncup](https://raw.githubusercontent.com/dorisjlee/remote/master/terminal-notes-gif/syncup.gif)
 
 The ``diary`` command is used for writing diaries that are stored separately from  your research diaries. By default, it saves it into a folder called ``diary.noindex``, the .noindex prevents Mac from indexing it in the Spotlight search.
 
