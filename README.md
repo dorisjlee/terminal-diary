@@ -31,7 +31,7 @@ The ``note`` command lets you jot down notes. All the notes written on the same 
 Taking some notes about machine learning (ML):
 
 ``note ML``
-![](https://i.imgsafe.org/c7fcc4e40b.gif)
+![](https://raw.githubusercontent.com/dorisjlee/remote/master/terminal-notes-gif/noteML.gif)
 
 
 
@@ -42,14 +42,14 @@ The ``organize`` command compiles all your note files from multiple days into re
 
 For quick reference of recent notes on terminal (No Pdf):
 ``organize ML notes``
-![](https://i.imgsafe.org/c7fcc24da5.gif)
+![](https://raw.githubusercontent.com/dorisjlee/remote/master/terminal-notes-gif/organize_MLnotes.gif)
 
 ``organize ML notes pdf``
-![](https://i.imgsafe.org/c7fcb6a0e0.gif)
+![](https://raw.githubusercontent.com/dorisjlee/remote/master/terminal-notes-gif/oragnizeMLnotespdf.gif)
 
 If I want all my machine learning notes in diary format (include time stamps) as a pdf
 ``organize ML diary pdf``
-![](https://goo.gl/BEnsaK)
+![](https://raw.githubusercontent.com/dorisjlee/remote/master/terminal-notes-gif/organizeMLdiarypdf.gif)
 
 
 Sometimes I forget which keyword tags I've used for a subject keyword (Was it ML or machine_learning or machine-learning?). You can use the ``iforgot`` command to print a list of all the keywords that you've ever used, so that they'll all get sorted together.
