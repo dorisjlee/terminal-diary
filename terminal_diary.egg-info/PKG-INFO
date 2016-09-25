@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: terminal-diary
+Version: 0.9.0
+Summary: Note-taking app for writing your diary in the terminal
+Home-page: https://github.com/dorisjlee/terminal-diary
+Author: Doris Jung-Lin Lee
+Author-email: dorisjunglinlee@gmail.com
+License: BSD
+Description: UNKNOWN
+Keywords: note,diary,text-edit
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License

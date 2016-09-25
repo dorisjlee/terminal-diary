@@ -1,0 +1,8 @@
+[console_scripts]
+diary = terminal_diary.diary:main
+iforgot = terminal_diary.iforgot:main
+note = terminal_diary.note:main
+organize = terminal_diary.organize:main
+syncup = terminal_diary.syncup:main
+terminal-diary = terminal_diary.terminal_diary:main
+
