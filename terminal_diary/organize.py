@@ -54,7 +54,7 @@ def main(args=None):
     content = ""
     FIRST=True
 
-    for filename in glob.glob("daily/{}_*.md".format(year)):
+    for filename in glob.glob("daily/{}-*.md".format(year)):
         f = open(filename)
         for line in f.readlines():
             if (line[:4]==year):

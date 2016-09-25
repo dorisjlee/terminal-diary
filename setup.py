@@ -9,7 +9,16 @@ try:
     os.system("rm terminal_diary/DIARY_LOC")
 except:
     pass
+try:
+    os.system("rm terminal_diary/WEB_LOC")
+except:
+    pass
 def user_prompt():
+    f0 = raw_input("\n Please type in the path to the directory where you host your Jekyll blogpost, or type 'none' if you chose not to use the web interface.: \n (Default: _posts/) ")
+    file = open('terminal_diary/WEB_LOC', 'a')
+    file.write(f0)
+    file.close()
+
     f = raw_input("\n Please type in the path to the directory where you want to store your notes and press 'Enter': \n (Default: Desktop/terminal-notes) ")
 
     if f=="":
@@ -57,6 +66,7 @@ setup(
         'pandas>=0.16.0'
     ],
     data_files = [('', ['terminal_diary/FILE_LOC',]),
-                  ('', ['terminal_diary/DIARY_LOC',])]
+                  ('', ['terminal_diary/DIARY_LOC',]),
+                  ('', ['terminal_diary/WEB_LOC',])]
 )
 
