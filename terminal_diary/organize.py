@@ -54,7 +54,7 @@ def main(args=None):
     content = ""
     FIRST=True
 
-    for filename in glob.glob("daily/{}-*.md".format(year)):
+    for filename in glob.glob("daily/{}_*.md".format(year)):
         f = open(filename)
         for line in f.readlines():
             if (line[:4]==year):
@@ -110,7 +110,7 @@ def main(args=None):
         print ("Rending pdf with Pandoc")
         if not os.path.exists(flag):
             os.makedirs(flag)
-        os.system("pandoc -o {0}/{1}.pdf org_md/{1}.md".format(flag,keyword))
+        os.system("pandoc -V geometry:margin=0.5in -o {0}/{1}.pdf org_md/{1}.md".format(flag,keyword))
         if pdf=="pdf":
             os.system("open {0}/{1}.pdf".format(flag,keyword)) 
     else:
