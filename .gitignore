@@ -1,0 +1,9 @@
+*.pyc
+dist/*
+notes/*
+org_md/*
+diary/*
+daily/*
+build/*
+*.mov
+terminal_diary.egg-info/*
