@@ -75,7 +75,7 @@ The ``diary`` command is used for writing diaries that are stored separately fro
 
 # Web Diary
 
-I've also set up a web-app interface to the display the diary entries record by terminal-diary. The web diary option specified as ``WEB_LOC``path during installation. (If ``WEB_LOC`` is not specified, default mode doesn't contain the web-app mode ) The web-app runs on Jekyll and is based on [Victor Hugo's space-jekyll](https://github.com/victorvoid/space-jekyll-template). The Github repo for the web-diary is [here](git@github.com:dorisjlee/web_diary.git).
+I've also set up a web-app interface to the display the diary entries record by terminal-diary. The code on the master branch is the terminal-only version code, switch to the ``web`` branch of this repo in order to use the web interface. The web diary option specified as ``WEB_LOC``path during installation. (If ``WEB_LOC`` is not specified, default mode doesn't contain the web-app mode ) The web-app runs on Jekyll and is based on [Victor Hugo's space-jekyll](https://github.com/victorvoid/space-jekyll-template). The Github repo for the web-diary is [here](git@github.com:dorisjlee/web_diary.git).
 
 ![tag](https://raw.githubusercontent.com/dorisjlee/remote/master/web-diary-img/tags.png)
 
