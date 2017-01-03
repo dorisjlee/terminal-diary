@@ -7,3 +7,4 @@ daily/*
 build/*
 *.mov
 terminal_diary.egg-info/*
+LOCAL_README

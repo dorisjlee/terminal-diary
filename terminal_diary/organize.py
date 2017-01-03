@@ -4,6 +4,8 @@ import pandas as pd
 import numpy as np
 import os
 import glob
+year_lst = ['2016','2017','2018']
+
 here = os.path.abspath(os.path.dirname(__file__))
 os.chdir(here)
 data_path = open(here+"/../FILE_LOC").read()
@@ -49,15 +51,15 @@ def main(args=None):
     tag1=""
     tag2=""
     content=""
-    year = '2016'
+    
     mega_content  = []
     content = ""
     FIRST=True
 
-    for filename in glob.glob("daily/{}_*.md".format(year)):
+    for filename in glob.glob("daily/*.md"):
         f = open(filename)
         for line in f.readlines():
-            if (line[:4]==year):
+            if (line[:4] in year_lst):
                 if (FIRST):
                     line = line.split()
                     date = line[0]

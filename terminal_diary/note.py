@@ -4,6 +4,8 @@ import os
 import time
 import glob
 import datetime
+year_lst = ['2016','2017','2018']
+
 WEB=True
 here = os.path.abspath(os.path.dirname(__file__))
 os.chdir(here)
@@ -37,7 +39,7 @@ def main(args=None):
 			for l in lines:
 				phrase = l.split()
 				try:
-					if phrase[0][:4]=='2016':
+					if phrase[0][:4] in year_lst:
 						tags.append(phrase[2])
 				except:
 					pass

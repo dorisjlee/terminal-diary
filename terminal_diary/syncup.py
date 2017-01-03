@@ -19,7 +19,8 @@ def main():
 	os.chdir("terminal-notes")
 
 
-	exclude  = open("exclude_keywords").readlines()
+	exclude  = open("exclude_keywords",'r').readlines()
+	print "Exclude these: ", exclude
 	print "Here are all the notes that I will organize:"
 	os.system("iforgot")
 	tags  = open("org_md/word.md").readlines()
