@@ -2,15 +2,9 @@
 import sys
 import pandas as pd
 import numpy as np
-import os
 import glob
-year_lst = ['2016','2017','2018']
-
-here = os.path.abspath(os.path.dirname(__file__))
-os.chdir(here)
-data_path = open(here+"/../FILE_LOC").read()
-os.chdir("../../../../../../../")
-os.chdir(data_path)
+from terminal_diary import year_lst,initialize_WEB_FILE_LOC_directory
+WEB,web_path,data_path = initialize_WEB_FILE_LOC_directory()()
 
 if not os.path.exists("terminal-notes"):
     os.system("mkdir {}".format("terminal-notes"))

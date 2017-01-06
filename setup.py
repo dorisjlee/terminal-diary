@@ -53,7 +53,8 @@ setup(
             'note = terminal_diary.note:main',
             'diary = terminal_diary.diary:main',
             'iforgot=terminal_diary.iforgot:main',
-            'syncup=terminal_diary.syncup:main'
+            'syncup=terminal_diary.syncup:main',
+            'yesterday=terminal_diary.yesterday:main'
         ],
     },
     classifiers=[

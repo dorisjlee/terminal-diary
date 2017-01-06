@@ -4,29 +4,20 @@ import os
 import time
 import glob
 import datetime
-year_lst = ['2016','2017','2018']
-
-WEB=True
-here = os.path.abspath(os.path.dirname(__file__))
-os.chdir(here)
-web_path = open(here+"/../WEB_LOC").read()
-if web_path=="none":
-	WEB=False
-data_path = open(here+"/../FILE_LOC").read()
-os.chdir("../../../../../../../")
-os.chdir(data_path)
-if not os.path.exists("terminal-notes"):
-    os.system("mkdir {}".format("terminal-notes"))
-os.chdir("terminal-notes")
+from terminal_diary import year_lst,initialize_WEB_FILE_LOC_directory
+WEB,web_path,data_path = initialize_WEB_FILE_LOC_directory()
 
 def main(args=None):
 	today = str(datetime.date.today()).replace("-","_")
+	edit_note(today)
+def edit_note(date):
 	timestamp =  str(datetime.datetime.now()).split(".")[0]
+	stnd_date = date.replace("_","-")
 	try:
 		tag = sys.argv[1]
 		if not os.path.exists("daily"):
 		    os.makedirs("daily")
-		fname = 'daily/{}.md'.format(today)
+		fname = 'daily/{}.md'.format(date)
 		f = open(fname, 'a')   
 		f.write(timestamp+ "     "+ tag+"        \n \n")
 		f.close()
@@ -48,10 +39,10 @@ def main(args=None):
 			for i in list(set(tags)):
 				tag+='- {}\n'.format(i)
 				tag_temp_name+='_{}'.format(i)
-			for _f in glob.glob(os.path.expanduser("~/{0}/{1}".format(web_path,'{0}-*.md'.format(str(datetime.date.today()))))):
+			for _f in glob.glob(os.path.expanduser("~/{0}/{1}".format(web_path,'{0}-*.md'.format(stnd_date)))):
 				print "Removed "+_f
 				os.system("rm {}".format(_f))
-			f1 = open(os.path.expanduser("~/{0}/{1}".format(web_path,'{0}-{1}.md'.format(str(datetime.date.today()),tag_temp_name))), 'w') 
+			f1 = open(os.path.expanduser("~/{0}/{1}".format(web_path,'{0}-{1}.md'.format(stnd_date,tag_temp_name))), 'w') 
 			# Insert Jekyll Header for Blogpost
 			f1.write('''---
 layout: post
@@ -62,7 +53,7 @@ tags:
 categories:
 - Work
 ---
-'''.format(str(datetime.date.today()),tag))
+'''.format(stnd_date,tag))
 			 
 			f1.writelines(lines)
 			f.close()

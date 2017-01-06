@@ -1,3 +1,7 @@
+terminal_diary/FILE_LOC
+terminal_diary/WEB_LOC
+terminal_diary/DIARY_LOC
+terminal_diary/*.pyc
 *.pyc
 dist/*
 notes/*
@@ -6,5 +10,5 @@ diary/*
 daily/*
 build/*
 *.mov
-terminal_diary.egg-info/*
+terminal_diary.egg-info/
 LOCAL_README
