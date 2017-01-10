@@ -8,6 +8,7 @@ terminal_diary/note.py
 terminal_diary/organize.py
 terminal_diary/syncup.py
 terminal_diary/terminal_diary.py
+terminal_diary/yesterday.py
 terminal_diary.egg-info/PKG-INFO
 terminal_diary.egg-info/SOURCES.txt
 terminal_diary.egg-info/dependency_links.txt

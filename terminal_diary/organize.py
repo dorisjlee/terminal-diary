@@ -1,14 +1,11 @@
 #!/usr/bin/env python2.7
+import os
 import sys
 import pandas as pd
 import numpy as np
 import glob
 from terminal_diary import year_lst,initialize_WEB_FILE_LOC_directory
-WEB,web_path,data_path = initialize_WEB_FILE_LOC_directory()()
-
-if not os.path.exists("terminal-notes"):
-    os.system("mkdir {}".format("terminal-notes"))
-os.chdir("terminal-notes")
+WEB,web_path,data_path = initialize_WEB_FILE_LOC_directory()
 
 def main(args=None):
     try: 

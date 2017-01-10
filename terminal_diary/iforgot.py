@@ -7,10 +7,6 @@ import os
 import glob
 from terminal_diary import year_lst,initialize_WEB_FILE_LOC_directory
 WEB,web_path,data_path = initialize_WEB_FILE_LOC_directory()
- 
-if not os.path.exists("terminal-notes"):
-    os.system("mkdir {}".format("terminal-notes"))
-os.chdir("terminal-notes")
 
 def main(args=None):
     date = ""
@@ -23,6 +19,7 @@ def main(args=None):
     content = ""
     FIRST=True
     keyword="word"
+    
     for filename in glob.glob("daily/*.md"):
         f = open(filename)
         for line in f.readlines():

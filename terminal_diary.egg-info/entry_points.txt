@@ -5,4 +5,5 @@ note = terminal_diary.note:main
 organize = terminal_diary.organize:main
 syncup = terminal_diary.syncup:main
 terminal-diary = terminal_diary.terminal_diary:main
+yesterday = terminal_diary.yesterday:main
 
