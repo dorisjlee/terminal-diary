@@ -1,20 +1,27 @@
 import os
 
-year_lst = ['2016','2017','2018']
+year_lst = map(lambda x: str(x),range(2015,2050))
 
-def initialize_WEB_FILE_LOC_directory():
+def initialize_WEB_FILE_LOC_directory(debug=False):
     WEB=True
-    here = os.path.abspath(os.path.dirname(__file__))
-    os.chdir(here)
-    web_path = open(here+"/../WEB_LOC").read()
-    if web_path=="none":
-        WEB=False
-    data_path = open(here+"/../FILE_LOC").read()
-    os.chdir("../../../../../../../")
-    os.chdir(data_path)
-    if not os.path.exists("terminal-notes"):
-        os.system("mkdir {}".format("terminal-notes"))
-    os.chdir("terminal-notes")
+    if debug:
+        web_path = "~/Desktop/PersonalProj/web_diary/_posts"
+        data_path = "~/Dropbox/"
+        os.chdir(os.path.expanduser(data_path))
+        os.chdir("terminal-notes")
+    else:
+        here = os.path.abspath(os.path.dirname(__file__))
+        os.chdir(here)
+        web_path = open("../WEB_LOC").read()
+        if web_path=="none":
+            WEB=False
+        data_path = open("../FILE_LOC").read()
+        # os.chdir("../../../../../../../")
+        os.chdir(os.path.expanduser(data_path))
+        if not os.path.exists("terminal-notes"):
+            os.system("mkdir {}".format("terminal-notes"))
+        os.chdir("terminal-notes")
+    print "Current Location:", os.getcwd()
     return WEB,web_path,data_path
 
 def main():

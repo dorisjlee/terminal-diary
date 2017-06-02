@@ -5,7 +5,7 @@ terminal-diary is an easy-to-use, note-taking and diary app that lets you take n
 
 ## Installation : 
 
-- [Install pandoc](http://pandoc.org/installing.html) for compiling Markdown to PDF (Optional if you only want to use terminal-diary in plain text mode)
+- [Install pandoc](http://pandoc.org/installing.html) for compiling Markdown to PDF,require version>=1.16(Optional if you only want to use terminal-diary in plain text mode)
 
 - Easiest way to install terminal-diary is through ``pip``: 
 

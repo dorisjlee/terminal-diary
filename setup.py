@@ -14,22 +14,23 @@ try:
 except:
     pass
 def user_prompt():
-    f0 = raw_input("\n Please type in the path to the directory where you host your Jekyll blogpost, or type 'none' if you chose not to use the web interface.: \n (Default: _posts/) ")
+    f0 = raw_input("\n Please type in the path to the directory where you host your Jekyll blogpost, or type 'none' if you chose not to use the web interface.: \n (Default: ~/Desktop/PersonalProj/web_diary/_posts) ")
+    if f0 =='':
+        f0 = '~/Desktop/PersonalProj/web_diary/_posts'
     file = open('terminal_diary/WEB_LOC', 'a')
     file.write(f0)
     file.close()
 
-    f = raw_input("\n Please type in the path to the directory where you want to store your notes and press 'Enter': \n (Default: Desktop/terminal-notes) ")
-
-    if f=="":
-        f = "Desktop"
+    f = raw_input("\n Please type in the path to the directory where you want to store your notes and press 'Enter': \n (Default: ~/Dropbox/terminal-notes) ")
+    if f =='':
+        f = '~/Dropbox/'
     file = open('terminal_diary/FILE_LOC', 'a')
     file.write(f)
     file.close()
 
-    f2 = raw_input("\n Please type in the path to the directory where you want to store your diaries and press 'Enter': \n (Default: Desktop/diary.noindex) ")
+    f2 = raw_input("\n Please type in the path to the directory where you want to store your diaries and press 'Enter': \n (Default: ~/Desktop/PersonalProj/diary.noindex) ")
     if f2=="":
-        f2 = "Desktop"
+        f2 = '~/Desktop/PersonalProj'
     file2 = open('terminal_diary/DIARY_LOC', 'a')
     file2.write(f2)
     file2.close()

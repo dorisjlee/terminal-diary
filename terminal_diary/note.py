@@ -42,7 +42,7 @@ def edit_note(date):
 			for _f in glob.glob(os.path.expanduser("~/{0}/{1}".format(web_path,'{0}-*.md'.format(stnd_date)))):
 				print "Removed "+_f
 				os.system("rm {}".format(_f))
-			f1 = open(os.path.expanduser("~/{0}/{1}".format(web_path,'{0}-{1}.md'.format(stnd_date,tag_temp_name))), 'w') 
+			f1 = open(os.path.expanduser("{0}/{1}".format(web_path,'{0}-{1}.md'.format(stnd_date,tag_temp_name))), 'w') 
 			# Insert Jekyll Header for Blogpost
 			f1.write('''---
 layout: post

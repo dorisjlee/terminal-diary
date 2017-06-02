@@ -6,7 +6,7 @@ import numpy as np
 import glob
 from terminal_diary import year_lst,initialize_WEB_FILE_LOC_directory
 WEB,web_path,data_path = initialize_WEB_FILE_LOC_directory()
-
+# WEB,web_path,data_path = initialize_WEB_FILE_LOC_directory(debug=True)
 def main(args=None):
     try: 
         keyword =  sys.argv[1]
@@ -42,7 +42,7 @@ def main(args=None):
     tag1=""
     tag2=""
     content=""
-    
+
     mega_content  = []
     content = ""
     FIRST=True
@@ -65,6 +65,7 @@ def main(args=None):
                     FIRST=False
                 else:
                     mega_content.append([date,time,tag1,tag2,content])
+                    #print mega_content
                     line = line.split()
                     date = line[0]
                     time = line[1]
@@ -103,7 +104,7 @@ def main(args=None):
         print ("Rending pdf with Pandoc")
         if not os.path.exists(flag):
             os.makedirs(flag)
-        os.system("pandoc -V geometry:margin=0.5in -o {0}/{1}.pdf org_md/{1}.md".format(flag,keyword))
+        os.system("pandoc -V geometry:margin=0.5in -o {0}/{1}.pdf org_md/{1}.md --latex-engine=xelatex --wrap=preserve".format(flag,keyword))
         if pdf=="pdf":
             os.system("open {0}/{1}.pdf".format(flag,keyword)) 
     else:
